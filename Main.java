@@ -1,7 +1,7 @@
-// PARTNER NAME:
-// PARTNER NAME:
-// CS111 SECTION #:
-// DATE:
+
+// PARTNER NAME: Amanda Sealock	
+// CS111 SECTION #: 1274
+// DATE: 13 March 2025
 
 public class Main
 {
@@ -39,7 +39,7 @@ public class Main
 	/**
 	 * Outputs welcome message to start program that user sees
 	 */
-	public static void printWelcome()
+	public static void printWelcome() 
 	{
 		UtilityBelt.printCentered(50, "Welcome to MCC Taco Stand!");
 		UtilityBelt.printCentered(50, "┈┈┈┈╭╯╭╯╭╯┈┈┈┈┈");
