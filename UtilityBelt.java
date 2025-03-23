@@ -42,11 +42,14 @@ public class UtilityBelt
 	*
 	* @return returns integer value between lower and upper (inclusive)
 	**/
-	public static int readInt(String prompt, int lower, int upper)
+	public static int readInt(String prompt1, String prompt2, int lower, int upper)
 	{
-		String temp;
+		prompt1 = "Enter number: "
+		prompt2 = "Enter number of tacos you want: ";
 		int result;
 		boolean isNotValid;
+		lower = 0;
+		upper = 5;
 		
 		isNotValid = true; // initialize all variables, Compiler will complain because they are initialized in try/catch
 		result = 0;
@@ -54,21 +57,21 @@ public class UtilityBelt
 		do
 		{
 			System.out.print(prompt);
-			temp = keyboard.nextLine();
+			prompt = keyboard.nextLine();
 			
 			try
 			{
-				result = Integer.parseInt(temp);
+				result = Integer.parseInt(prompt);
 				isNotValid = (result < lower) || (result > upper);
 				
 				if(isNotValid)
 				{
-					System.out.println("ERROR: please enter value between " + lower + " - " + upper);
+					System.out.println("We don't have that many tacos, sorry! Try again :(");
 				}
 			}
 			catch(NumberFormatException nfe)
 			{
-				System.out.println("Error: integer input is required");
+				System.out.println("We don't have that many tacos, sorry! Try again :(");
 			}
 			
 		} while(isNotValid);
@@ -87,7 +90,9 @@ public class UtilityBelt
 	*
 	* @return returns double value between lower and upper (inclusive)
 	**/
-	public static double readDouble(String prompt, double lower, double upper)
+	
+	
+	/*public static double readInt(String prompt, double lower, double upper)
 	{
 		String temp;
 		double result;
@@ -119,7 +124,7 @@ public class UtilityBelt
 
 
 		return result;
-	}
+	}*/
 
 
 	/**
