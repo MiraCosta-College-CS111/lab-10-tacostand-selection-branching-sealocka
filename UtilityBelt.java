@@ -42,10 +42,9 @@ public class UtilityBelt
 	*
 	* @return returns integer value between lower and upper (inclusive)
 	**/
-	public static int readInt(String prompt1, String prompt2, int lower, int upper)
+	public static int readInt(String prompt, int lower, int upper)
 	{
-		prompt1 = "Enter number: "
-		prompt2 = "Enter number of tacos you want: ";
+		prompt = "Enter number of tacos you want: ";
 		int result;
 		boolean isNotValid;
 		lower = 0;

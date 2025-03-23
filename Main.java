@@ -65,6 +65,12 @@ public class Main
 		TacoStand.printMenu();
 		option = UtilityBelt.readInt("Enter choice> ", 1, 4);
 		numTacosOrdered = UtilityBelt.readInt("Enter number of tacos you want> ", 1, 50);
+			do
+			{
+				System.out.println("We don't have that many tacos, sorry! Try again :(");
+				System.in(UtilityBelt.readInt);
+			}
+			while (numTacosOrdered < 0 || numTacosOrdered > 5);
 
 		//CALCULATION + OUTPUT SECTION
 		TacoStand.updateTotalFunds(option, numTacosOrdered);
