@@ -42,6 +42,40 @@ public class UtilityBelt
 	*
 	* @return returns integer value between lower and upper (inclusive)
 	**/
+
+public static int readNum(String prompt, double lower, double upper)
+	{
+		prompt = "Enter number: ";
+		int result;
+		boolean isNotValid;
+		
+		isNotValid = true;
+		result = 0;
+		
+		do
+		{
+			System.out.print(prompt);
+			prompt = keyboard.nextLine();
+			
+			try
+			{
+				result = (int)Double.parseDouble(prompt);
+				isNotValid = (result < lower) || (result > upper);
+				
+				if(isNotValid)
+				{
+					System.out.println("ERROR: please enter value between " + lower + " - " + upper);
+				}
+			}
+			catch(NumberFormatException nfe)
+			{
+				System.out.println("ERROR: double input is required");
+			}
+		} while(isNotValid);
+
+		return result;
+	}
+
 	public static int readInt(String prompt, int lower, int upper)
 	{
 		prompt = "Enter number of tacos you want: ";
@@ -91,40 +125,7 @@ public class UtilityBelt
 	**/
 	
 	
-	/*public static double readInt(String prompt, double lower, double upper)
-	{
-		String temp;
-		double result;
-		boolean isNotValid;
-		
-		isNotValid = true;
-		result = 0;
-		
-		do
-		{
-			System.out.print(prompt);
-			temp = keyboard.nextLine();
-			
-			try
-			{
-				result = Double.parseDouble(temp);
-				isNotValid = (result < lower) || (result > upper);
-				
-				if(isNotValid)
-				{
-					System.out.println("ERROR: please enter value between " + lower + " - " + upper);
-				}
-			}
-			catch(NumberFormatException nfe)
-			{
-				System.out.println("ERROR: double input is required");
-			}
-		} while(isNotValid);
-
-
-		return result;
-	}*/
-
+	
 
 	/**
 	* Reads input from user until valid char value entered (error-checked using validChars)

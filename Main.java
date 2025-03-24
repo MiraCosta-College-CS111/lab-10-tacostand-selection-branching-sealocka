@@ -1,7 +1,7 @@
 
 // PARTNER NAME: Amanda Sealock	
 // CS111 SECTION #: 1274
-// DATE: 13 March 2025
+// DATE: 23 March 2025
 
 public class Main
 {
@@ -63,14 +63,14 @@ public class Main
 
 		//INPUT SECTION
 		TacoStand.printMenu();
-		option = UtilityBelt.readInt("Enter choice> ", 1, 4);
+		option = UtilityBelt.readNum("Enter choice> ", 1, 4);
 		numTacosOrdered = UtilityBelt.readInt("Enter number of tacos you want> ", 1, 50);
-			do
+			/*do
 			{
 				System.out.println("We don't have that many tacos, sorry! Try again :(");
-				System.in(UtilityBelt.readInt);
+				System.console();
 			}
-			while (numTacosOrdered < 0 || numTacosOrdered > 5);
+			while (numTacosOrdered < 0 || numTacosOrdered > 5);*/
 
 		//CALCULATION + OUTPUT SECTION
 		TacoStand.updateTotalFunds(option, numTacosOrdered);
