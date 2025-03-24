@@ -96,7 +96,7 @@ public class TacoStand
 	 * @param tacoOption menu option (kind of taco)
 	 * @param numTacos number of tacos as part of order, assume > 0
 	 */
-	public static void updateTotalFunds(int tacoOption, int numTacos)
+	public static void updateTotalFunds(int tacoOption, int numTacos, int funds)
 	{
 		tacoOption = 0;
 		numTacos = 0;
@@ -116,9 +116,7 @@ public class TacoStand
 	{
 		tacoOption = 0;
 		numTacos = 0;
-		if(numTacos <= 0)
-		{
-			return false; //TODO: this is stubbed, replace this line with your actual code!
-		}
+		
+		return false; //TODO: this is stubbed, replace this line with your actual code!
 	}
 }
