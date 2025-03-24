@@ -61,7 +61,8 @@ public class TacoStand
 	 */
 	public static void addTotalFunds(int funds)
 	{
-		TacoStand.totalFunds += funds;
+		funds = readNum() * readInt(); 
+		TacoStand.totalFunds = funds;
 	}
 	
 	/**
@@ -97,6 +98,8 @@ public class TacoStand
 	 */
 	public static void updateTotalFunds(int tacoOption, int numTacos)
 	{
+		tacoOption = 0;
+		numTacos = 0;
 		TacoStand.updateTotalFunds += funds;
 	}
 	
@@ -111,6 +114,11 @@ public class TacoStand
 	 */
 	public static boolean areTacosAvailable(int tacoOption, int numTacos)
 	{
-		return false; //TODO: this is stubbed, replace this line with your actual code!
+		tacoOption = 0;
+		numTacos = 0;
+		if(numTacos <= 0)
+		{
+			return false; //TODO: this is stubbed, replace this line with your actual code!
+		}
 	}
 }
