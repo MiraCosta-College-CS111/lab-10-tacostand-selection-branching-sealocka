@@ -97,7 +97,7 @@ public class TacoStand
 	 */
 	public static void updateTotalFunds(int tacoOption, int numTacos)
 	{
-		//TODO: this is stubbed, replace this line with your actual code!
+		TacoStand.updateTotalFunds += funds;
 	}
 	
 	
