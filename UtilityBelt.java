@@ -64,7 +64,7 @@ public static int readNum(String prompt, double lower, double upper)
 				
 				if(isNotValid)
 				{
-					System.out.println("ERROR: please enter value between " + lower + " - " + upper);
+					System.out.println("ERROR: please enter value between " + (int)lower + " - " + (int)upper);
 					System.out.print("Enter choice>");
 				}
 			}
@@ -98,10 +98,10 @@ public static int readNum(String prompt, double lower, double upper)
 				result = Integer.parseInt(prompt);
 				isNotValid = (result < lower) || (result > upper);
 				
-				if(isNotValid)
+				/*if(isNotValid)
 				{
 					System.out.println("We don't have that many tacos, sorry! Try again :(");
-				}
+				}*/
 			}
 			catch(NumberFormatException nfe)
 			{
