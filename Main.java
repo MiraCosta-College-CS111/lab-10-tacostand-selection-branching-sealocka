@@ -3,7 +3,7 @@
 // CS111 SECTION #: 1274
 // DATE: 23 March 2025
 
-public class Main
+public class Main //Main class
 {
 
 	/**
@@ -15,10 +15,10 @@ public class Main
 	 * - Take customer order
 	 * - Print status of stand (when its closed)
 	 */
-	public static void main(String[] args)
+	public static void main(String[] args) // Main method
 	{
-		//DECLARATION + INITIALIZATION SECTION
-		TacoStand.initialize();
+		//DECLARATION + INITIALIZATION SECTION -- Notice how this section corresponds to Algorithm steps above 
+		TacoStand.initialize(); 
 
 		//INPUT + CALCULATION + OUTPUT SECTION
 		TacoStand.addTotalFunds(20);
@@ -73,7 +73,7 @@ public class Main
 			while (numTacosOrdered < 0 || numTacosOrdered > 5);*/
 
 		//CALCULATION + OUTPUT SECTION
-		TacoStand.updateTotalFunds(option, numTacosOrdered);
+		TacoStand.updateTotalFunds(option, numTacosOrdered, (int)TacoStand.totalFunds);
 		Main.printConfirmation(numTacosOrdered);
 	}
 
@@ -85,6 +85,6 @@ public class Main
 	public static void printConfirmation(int numTacos) //TODO: upgrade per documentation
 	{
 		System.out.println("Here you go, buen provecho!");
-		System.out.println("🌮");
+		System.out.println("🌮🌮🌮");
 	}
 }

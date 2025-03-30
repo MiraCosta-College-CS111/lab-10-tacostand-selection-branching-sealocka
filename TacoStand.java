@@ -8,8 +8,8 @@ public class TacoStand
 	public static final String ULTIMATE_TACO = "Ultimate Taco";
 
 	/* STATIC VARIABLES */
-	private static int numAsada = 0, numPollo = 0, numLengua = 0, numUltimate = 0;
-	private static double totalFunds = 0;
+	public static int numAsada = 0, numPollo = 0, numLengua = 0, numUltimate = 0;
+	public static double totalFunds = 0;
 
 	/**
 	 * Sets the store to zero for use in automated testing.
@@ -47,11 +47,11 @@ public class TacoStand
 			"%-23s%2d tacos%n" +
 			"%-23s%2d tacos%n%s",
 			TacoStand.BAR, TacoStand.BAR, 
-      "Funds Available:", TacoStand.totalFunds, TacoStand.BAR,
-      "# of Asada Left:", TacoStand.numAsada,
+      		"Funds Available:", TacoStand.totalFunds, TacoStand.BAR,
+      		"# of Asada Left:", TacoStand.numAsada,
 			"# of Pollo Left:", TacoStand.numPollo,
-      "# of Lengua Left:", TacoStand.numLengua,
-      "# of Ultimate Left:",TacoStand.numUltimate, TacoStand.BAR);
+     		"# of Lengua Left:", TacoStand.numLengua,
+     		"# of Ultimate Left:",TacoStand.numUltimate, TacoStand.BAR);
 	}
 
 	/**
@@ -61,8 +61,8 @@ public class TacoStand
 	 */
 	public static void addTotalFunds(int funds)
 	{
-		funds = readNum() * readInt(); 
-		TacoStand.totalFunds = funds;
+		//funds = readNum() * readInt(); 
+		TacoStand.totalFunds += funds;
 	}
 	
 	/**
@@ -77,14 +77,17 @@ public class TacoStand
 	public static boolean orderSupplies(double budget)
 	{
 		//tacos cost 75 cents each in supplies, keeping it simple
-	    int tacosEach = (int)(Math.round(budget / 0.75 / 4));
+	    //int tacosEach = (int)(Math.round(budget / 0.75 / 4));
 
-	    TacoStand.totalFunds -= budget;
+		budget = 5;
+		double tacosEach = 5;
+
+	    TacoStand.totalFunds = budget - (numAsada * 0.75) - (numPollo * 0.75) - (numLengua * 0.75) - (numUltimate * 0.75);
 
 	    TacoStand.numAsada += tacosEach;
-	    TacoStand.numPollo += tacosEach;
-	    TacoStand.numLengua += tacosEach;
-	    TacoStand.numUltimate += tacosEach;
+	    TacoStand.numPollo += tacosEach ;
+	    TacoStand.numLengua += tacosEach ;
+	    TacoStand.numUltimate += tacosEach ;
 
 		return true;  //TODO: this is stubbed, replace this line with your actual code!
 	}
@@ -100,7 +103,7 @@ public class TacoStand
 	{
 		tacoOption = 0;
 		numTacos = 0;
-		TacoStand.updateTotalFunds += funds;
+		TacoStand.totalFunds += funds;
 	}
 	
 	

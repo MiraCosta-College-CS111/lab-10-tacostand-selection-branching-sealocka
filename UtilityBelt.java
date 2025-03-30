@@ -45,7 +45,7 @@ public class UtilityBelt
 
 public static int readNum(String prompt, double lower, double upper)
 	{
-		prompt = "Enter number: ";
+		prompt = "Enter choice> ";
 		int result;
 		boolean isNotValid;
 		
@@ -65,6 +65,7 @@ public static int readNum(String prompt, double lower, double upper)
 				if(isNotValid)
 				{
 					System.out.println("ERROR: please enter value between " + lower + " - " + upper);
+					System.out.print("Enter choice>");
 				}
 			}
 			catch(NumberFormatException nfe)
